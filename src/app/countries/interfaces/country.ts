@@ -59,6 +59,7 @@ export interface Currencies {
     EUR?: Clp;
     USD?: Clp;
     CRC?: Clp;
+    XCD?: Clp;
 }
 
 export interface Clp {
