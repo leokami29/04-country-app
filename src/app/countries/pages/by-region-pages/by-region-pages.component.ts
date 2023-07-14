@@ -17,15 +17,14 @@ export class ByRegionPagesComponent implements OnInit {
   public countries : Country[] = [];
   public regions : Region[] = ['Africa','Americas','Asia','Europe','Oceania'];
   public selectedRegion? : Region;
-  public initialValue : string = '' 
 
   constructor( private countrieService : CountriesService) {
 
   }
 
   ngOnInit(): void {
-    this.regions = this.countrieService.chacheStore.byRegion.region
-    this.initialValue = this.countrieService.chacheStore.byRegion.countries
+    this.selectedRegion = this.countrieService.chacheStore.byRegion.region
+    this.countries = this.countrieService.chacheStore.byRegion.countries
   }
 
   searchByRegion( region : Region) : void {
